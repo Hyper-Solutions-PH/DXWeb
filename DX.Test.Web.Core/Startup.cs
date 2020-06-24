@@ -36,6 +36,7 @@ namespace DX.Test.Web.Core
             services.AddXpoDatabase((o) => {
                 o.Name = connStrName;
                 o.ConnectionString = Configuration.GetConnectionString(connStrName);
+                o.UpdateSchema = DevExpress.Xpo.DB.AutoCreateOption.DatabaseAndSchema;
             });
 
             //Initialize identity to use XPO
